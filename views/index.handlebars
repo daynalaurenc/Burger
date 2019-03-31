@@ -1,0 +1,60 @@
+<div class="container">
+	<div class="row">
+		<h1 id="header">Burger Mafia</h1>
+
+	</div>
+
+	<div class="row">
+			<img class="center-block" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTkhrHbYX3Zqo5i4TJejgq3baT28lrd8lZr2F-g4BngtK-q8YqZLA"/>
+	</div>
+<!-- this is index.handlebars -->
+	<div class="row">
+		<div class="col-lg-6">
+			<ul>	
+				{{#each burger}}
+					{{#unless devoured}}
+					  {{!-- add and if devoured equals false --}}
+					  	<li>
+					  		<p><span class="label">ID:</span> {{this.id}} {{this.burger_name}}    
+					      
+						    <form action="/update/{{this.id}}?_method=PUT" method="POST">
+						        <input type="hidden" name="id" value="{{this.id}}">
+						        <button type="submit">Devour it</button>
+					      	</form>
+					      	</p>
+					  	</li>
+					 {{/unless}}
+				{{/each}}
+			</ul>
+		</div>
+
+		<div class="col-lg-6">
+			<ul>
+				{{#each burger}}
+					{{#if devoured}}
+						<li>
+							<p>{{this.id}} {{this.burger_name}} </p>
+						</li>
+					{{/if}}
+				{{/each}}
+			</ul>
+
+		</div>
+	</div>
+
+{{!-- add another list for being devoured equal true --}}
+			<h2>What Mondo Burger will you CREATE!!!!!!</h2>
+<div class="row">
+	<div class="center-block">
+			<form class="create-form" action="/create" method="POST">
+
+			  <div class="form-group">
+			    <label for="quo"></label>
+			    <textarea id="quo" name="type" rows="8" cols="40"></textarea>
+			  </div>
+
+			  <button type="submit">Submit</button>
+			</form>
+		</di>
+	</div>
+</div>
