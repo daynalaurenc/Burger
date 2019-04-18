@@ -1,0 +1,46 @@
+#logo {
+    max-width: 1200px;
+    min-height: 150px;
+}
+
+h1 {
+    font-family: 'Noto Sans KR', sans-serif;
+    /* text-align: center; */
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2 {
+    /* text-align: center; */
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ba0c2f;
+}
+
+p {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+button {
+    border: 3px solid;
+    border-color: #ba0c2f;
+    color: #060704;
+    background-color: transparent;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    float: right;
+}
+.create {
+    margin-left: 5%;
+    margin-bottom: 50px;
+    float: left;
+}
+
+/* textarea {
+    font-size: 20px;
+} */
