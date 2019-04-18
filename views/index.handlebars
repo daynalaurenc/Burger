@@ -5,7 +5,7 @@
 	</div>
 
 	<div class="row">
-			<img class="center-block" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTkhrHbYX3Zqo5i4TJejgq3baT28lrd8lZr2F-g4BngtK-q8YqZLA"/>
+			{{!-- <img class="center-block" src="https://"/> --}}
 	</div>
 <!-- this is index.handlebars -->
 	<div class="row">
@@ -17,7 +17,7 @@
 					  	<li>
 					  		<p><span class="label">ID:</span> {{this.id}} {{this.burger_name}}    
 					      
-						    <form action="/update/{{this.id}}?_method=PUT" method="POST">
+						    <form action="/update/{{this.id}}" method="POST">
 						        <input type="hidden" name="id" value="{{this.id}}">
 						        <button type="submit">Devour it</button>
 					      	</form>
@@ -43,7 +43,7 @@
 	</div>
 
 {{!-- add another list for being devoured equal true --}}
-			<h2>What Mondo Burger will you CREATE!!!!!!</h2>
+			<h2>What Burger will you CREATE!!!!!!</h2>
 <div class="row">
 	<div class="center-block">
 			<form class="create-form" action="/create" method="POST">
