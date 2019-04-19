@@ -15,15 +15,15 @@
 				{{#each burger}}
 				{{#unless devoured}}
 				{{!-- add and if devoured equals false --}}
-				<li>
+				{{!-- <li> --}}
 
 					<form action="/update/{{this.id}}" method="POST">
-						<p><span class="label">ID:</span> {{this.id}} {{this.burger_name}}
+						<p>{{this.id}} {{this.burger_name}}
 							<input type="hidden" name="id" value="{{this.id}}">
 							<button type="submit">Devour It</button>
 					</form>
 					</p>
-				</li>
+				{{!-- </li> --}}
 				<hr>
 				{{/unless}}
 				{{/each}}

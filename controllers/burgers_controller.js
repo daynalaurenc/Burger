@@ -1,11 +1,10 @@
 var express = require("express");
 
+var burger = require("../models/burger");
+
 var router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
-var burger = require("../models/burger.js");
 
-// Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
   burger.selectAll(function(data) {
     res.render("index", {burger: data});
@@ -13,8 +12,11 @@ router.get("/", function(req, res) {
 });
 
 router.post("/create", function(req, res) {
-  burger.insertOne(req.body.type, function(){
-        res.redirect('/');
+  console.log("body @ burg_controller.js", req.body);
+  // burger.insertOne(req.body.type, falsefunction(){
+    burger.insertOne(req.body.type, false, function(result){
+        console.log(result)
+        res.redirect("/");
    });
 });
 
