@@ -2,7 +2,7 @@
 
 Gott's Roadside is a restaurant app that allows users to choose from a given menu, or input custom burgers that they would like to eat.
 
-[Burger App Link](https:/ "Burger App Link")
+[Burger App Link](https://limitless-ridge-21356.herokuapp.com/ "Burger App Link")
 
 ## Description
 
